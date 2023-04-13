@@ -1,0 +1,19 @@
+package com.dailyrang.ditest;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		
+		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
+		// 컨테이너 생성
+		
+		Student stu1 =	ctx.getBean("student1", Student.class);
+		
+		System.out.println(stu1.getName()); //홍길동
+		
+	}
+
+
+}
